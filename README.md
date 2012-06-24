@@ -1,5 +1,5 @@
 # GitHub Alfred extension
-An simple [Alfred](http://www.alfredapp.com/) extension for GitHub. The purpose
+A simple [Alfred](http://www.alfredapp.com/) extension for GitHub. The purpose
 of this extension was to learn how to integrate with Alfred, so there may be no
 real business value in this extension.
 
