@@ -14,8 +14,11 @@ subcommands on which the extension will respond to.
     github repository <username> <repository=username>
     
 ## Installation
-The lastest release is always located in the *release* directory. Either download
-the file yourself, or paste the following in the terminal.
+Installation couldn't be easier. Either download the extension directly by
+[clicking here](http://bit.ly/LuAwGQ) and then open it with Alfred.
+
+
+Or you can do it all in one sweep by pasting the following in your terminal.
 
     curl -OL http://bit.ly/LuAwGQ && open -a Alfred GitHub.alfredextension
     
