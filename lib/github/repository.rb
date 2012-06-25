@@ -4,7 +4,7 @@ module GitHub
       @username = username
       @repository = repository || username
     end
-    
+
     def url
       File.join(GitHub::BASE_URL, @username, @repository)
     end
