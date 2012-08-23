@@ -1,3 +1,6 @@
 source "https://rubygems.org"
 
-gem 'minitest'
+group :development do
+  gem 'minitest'
+  gem 'guard-minitest'
+end
