@@ -4,42 +4,10 @@ $:.unshift(File.expand_path('../../lib', __FILE__))
 
 require 'github'
 
-def display_usage(entry = nil)
-  entries = {
-    :user        => 'github user <username>',
-    :search      => 'github search <search_term>',
-    :repository  => 'github repository <username> <repository=username>'
-  }
-  
-  puts (entry ? entries[entry] : entries.values.join("\n"))
-end
+cli = GitHub::Cli.new(ARGV)
 
-def open_in_browser(url)
-  `open #{url}`
-end
-
-
-args = ENV['ALFRED'] ? ARGV[0].split : ARGV
-
-case args[0]
-when 'user'
-  if args[1]
-    open_in_browser(GitHub::User.new(args[1]).url)
-  else
-    display_usage(:user)
-  end
-when 'search'
-  if args[1]
-    open_in_browser(GitHub::Search.new(args[1]).url)
-  else
-    display_usage(:search)
-  end
-when 'repository'
-  if args[1]
-    open_in_browser(GitHub::Repository.new(args[1], args[2]).url)
-  else
-    display_usage(:repository)  
-  end
+if cli.command === :none
+  puts cli.display_usage
 else
-  display_usage
+  cli.open_in_browser
 end
