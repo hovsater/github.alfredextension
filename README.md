@@ -1,4 +1,6 @@
 # GitHub Alfred extension
+Current version: **0.0.1**
+
 A simple [Alfred](http://www.alfredapp.com/) extension for GitHub. The purpose
 of this extension was to learn how to integrate with Alfred, so there may be no
 real business value in this extension.
