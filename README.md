@@ -22,4 +22,4 @@ Installation couldn't be easier. Either download the extension directly by
 
 Or you can do it all in one sweep by pasting the following in your terminal.
 
-    curl -OL http://bit.ly/LuAwGQ && open -a Alfred GitHub.alfredextension
+    curl -L http://bit.ly/LuAwGQ -o GitHub.alfredextension && open -a Alfred GitHub.alfredextension
