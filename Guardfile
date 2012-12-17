@@ -2,7 +2,9 @@
 # More info at https://github.com/guard/guard#readme
 
 guard 'minitest' do
-  watch(%r|^test/.*\.rb|)
+  watch(%r|^lib/github\.rb|)       { "test" }
   watch(%r|^lib/(.+)/(.+)\.rb|)    { |m| "test/#{m[1]}/test_#{m[2]}.rb" }
+
+  watch(%r|^test/.*\.rb|)
   watch(%r|^test/test_helper\.rb|) { "test" }
 end
