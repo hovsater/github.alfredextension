@@ -25,9 +25,9 @@ module GitHub
     end
 
     it "escapes search query" do
-      url = GitHub::URL.new(:search, 'Kevin Sjöberg')
-      expected = 'https://github.com/search?q=Kevin+Sj%C3%B6berg'
+      url = GitHub::URL.new(:search, 'Kevin Sjöberg')
+      expected = 'https://github.com/search?q=Kevin+Sj%C3%B6berg'
       url.get.should eql(expected)
-    end
+    end
   end
 end
