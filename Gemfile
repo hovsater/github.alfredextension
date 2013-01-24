@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 group :development do
-  gem 'minitest'
-  gem 'guard-minitest'
+  gem 'rspec'
+  gem 'guard'
+  gem 'guard-rspec'
 end

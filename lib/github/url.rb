@@ -13,7 +13,7 @@ module GitHub
         File.join(BASE_URL, @fragment)
       end
     end
-    
+
     def get
       @url
     end
