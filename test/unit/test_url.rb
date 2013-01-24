@@ -1,3 +1,4 @@
+# encoding: utf-8
 require 'test_helper'
 
 class TestURL < MiniTest::Unit::TestCase
@@ -22,10 +23,10 @@ class TestURL < MiniTest::Unit::TestCase
     assert_equal(expected, url.get)
   end
 
-  def test_that_multiple_search_terms_get_properly_escaped
-    url = GitHub::URL.new(:search, 'KevinSjoberg GitHub')
+  def test_that_search_terms_get_properly_escaped
+    url = GitHub::URL.new(:search, 'Kevin Sjöberg')
     
-    expected = 'https://github.com/search?q=KevinSjoberg+GitHub'
+    expected = 'https://github.com/search?q=Kevin+Sj%C3%B6berg'
     assert_equal(expected, url.get)
   end
 end
